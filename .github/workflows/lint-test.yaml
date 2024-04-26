@@ -20,11 +20,6 @@ jobs:
               with:
                   version: 8
 
-            # Create Blank config.json
-            - name: Create Blank config.json
-              run: |
-                  echo '{ "token": "", "moderator-only": ""}' > config.json
-
             # Install Dependencies
             - name: Install dependencies
               run: pnpm install
