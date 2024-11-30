@@ -1,16 +1,16 @@
 {
     "name": "discord-bot",
     "version": "1.0.0",
-    "description": "",
     "main": "index.js",
     "type": "commonjs",
     "author": "SoftwareX Plus",
-    "license": "ISC",
+    "license": "MIT",
     "scripts": {
-        "dev": "nodemon --ext .ts,.cts,.mts,.json --watch src --exec tsx src/index.ts",
-        "test": "nodemon --ext .ts,.cts,.mts,.json --watch src --exec tsc --noEmit",
+        "fmt": "prettier --config=.prettierrc --write .",
+        "lint": "prettier --config=.prettierrc --check .",
+        "test": "tsc --noEmit",
+        "dev": "tsx watch src/index.ts",
         "build": "esbuild src/index.ts --bundle --outfile=index.js --platform=node --packages=external",
-        "lint": "prettier . --write --config .prettierrc",
         "start": "node index.js"
     },
     "keywords": [
@@ -18,14 +18,10 @@
         "discord-bot"
     ],
     "dependencies": {
-        "discord.js": "^14.14.1"
+        "discord.js": "^14.16.3"
     },
     "devDependencies": {
-        "@types/node": "^20.12.7",
-        "esbuild": "^0.20.2",
-        "nodemon": "^3.1.0",
-        "prettier": "^3.2.5",
-        "tsx": "^4.7.3",
-        "typescript": "^5.4.5"
+        "@types/node": "^22.10.1",
+        "prettier": "^3.4.1"
     }
 }

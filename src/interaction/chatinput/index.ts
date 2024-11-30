@@ -1,3 +1,4 @@
-import { ChatInputCommandData, CommandObject } from "../../type";
+import { RESTPostAPIApplicationCommandsJSONBody } from "discord.js"
+import { CommandObject } from "../../type"
 
-export default [require("./pong")] as Array<CommandObject<ChatInputCommandData>>;
+export default [require("./pong")] as Array<CommandObject<RESTPostAPIApplicationCommandsJSONBody>>

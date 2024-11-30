@@ -1,14 +1,17 @@
-import { ApplicationCommandType, UserContextMenuCommandInteraction } from "discord.js";
-import { ContextMenuCommandData } from "../../type";
+import {
+    ApplicationCommandType,
+    RESTPostAPIContextMenuApplicationCommandsJSONBody,
+    UserContextMenuCommandInteraction
+} from "discord.js"
 
-export const data: ContextMenuCommandData = {
+export const data: RESTPostAPIContextMenuApplicationCommandsJSONBody = {
     name: "User Information",
     dm_permission: false,
     type: ApplicationCommandType.User
-};
+}
 
 export async function run(interaction: UserContextMenuCommandInteraction) {
-    if (!interaction.inCachedGuild()) return;
+    if (!interaction.inCachedGuild()) return
 
     // prettier-ignore
     const roles = interaction.targetMember?.roles.cache.filter((role) => role.id !== interaction.guildId).map((role) => `<@&${role.id}>`).sort().join(", ") ?? "This user does not have any roles."
@@ -53,5 +56,5 @@ export async function run(interaction: UserContextMenuCommandInteraction) {
                 ]
             }
         ]
-    });
+    })
 }

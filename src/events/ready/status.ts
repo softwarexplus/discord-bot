@@ -1,4 +1,4 @@
-import { Client, ActivityType } from "discord.js";
+import { Client, ActivityType } from "discord.js"
 
 export async function status(client: Client<true>) {
     client.user.setPresence({
@@ -9,5 +9,5 @@ export async function status(client: Client<true>) {
                 type: ActivityType.Watching
             }
         ]
-    });
+    })
 }

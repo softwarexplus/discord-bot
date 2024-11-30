@@ -1,14 +1,14 @@
-import Button from "./button";
-export { Button };
+import Button from "./button"
+export { Button }
 
-import ChatInput from "./chatinput";
-export { ChatInput };
+import ChatInput from "./chatinput"
+export { ChatInput }
 
-import Context from "./context";
-export { Context };
+import Context from "./context"
+export { Context }
 
-import Modal from "./modal";
-export { Modal };
+import Modal from "./modal"
+export { Modal }
 
-import SelectMenu from "./selectmenu";
-export { SelectMenu };
+import SelectMenu from "./selectmenu"
+export { SelectMenu }

@@ -1,16 +1,14 @@
-import { ChatInputCommandInteraction } from "discord.js";
-import { ChatInputCommandData } from "../../type";
+import { ChatInputCommandInteraction, RESTPostAPIApplicationCommandsJSONBody } from "discord.js"
 
-export const data: ChatInputCommandData = {
+export const data: RESTPostAPIApplicationCommandsJSONBody = {
     name: "ping",
-    description: "Pong",
-    dm_permission: false
-};
+    description: "Pong"
+}
 
 export async function run(interaction: ChatInputCommandInteraction) {
-    await interaction.deferReply();
-    const reply = await interaction.fetchReply();
-    const ping = reply.createdTimestamp - interaction.createdTimestamp;
+    await interaction.deferReply()
+    const reply = await interaction.fetchReply()
+    const ping = reply.createdTimestamp - interaction.createdTimestamp
     interaction.followUp({
         embeds: [
             {
@@ -18,5 +16,5 @@ export async function run(interaction: ChatInputCommandInteraction) {
                 description: `Pong! Client: ${ping}ms \nWebsocket: ${interaction.client.ws.ping}ms`
             }
         ]
-    });
+    })
 }

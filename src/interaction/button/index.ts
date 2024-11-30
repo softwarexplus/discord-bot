@@ -1,3 +1,3 @@
-import { ButtonInteraction } from "discord.js";
+import { ButtonInteraction } from "discord.js"
 
-export default new Map<string, (arg: ButtonInteraction) => any>();
+export default new Map<string, (arg: ButtonInteraction) => any>()
